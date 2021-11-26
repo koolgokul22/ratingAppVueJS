@@ -2,7 +2,7 @@
 <div class="container">
   <div class="card card-body text-center p-5 mt-5 border-primary">
     <div class="mb-5 mt-2"><h1>Rating App</h1></div>
-    <div>
+    <div id="stars">
       <i class="fa fa-star text-warning fa-6x" @click="setRating(1)"></i>
       <i class="fa fa-star text-warning fa-6x" @click="setRating(2)"></i>
       <i class="fa fa-star text-warning fa-6x" @click="setRating(3)"></i>
@@ -47,5 +47,27 @@ export default {
 body {
   background-color: #333
 }
+
+div i {
+  cursor: pointer;
+  border-radius: 20%;
+  background: rgb(145, 74, 192);
+  padding: 0.5rem;
+  box-shadow: 5px 10px rgb(93, 57, 119);
+  margin: 0.5rem;
+}
+
+#stars:hover{
+  padding: 1rem;
+}
+
+div i:hover {
+  background: rgba(182, 29, 54, 0.925);
+  cursor: pointer;
+  border-radius: 20%;
+  padding: .5rem;
+  box-shadow: 5px 10px rgb(136, 39, 39);
+}
+
 
 </style>
