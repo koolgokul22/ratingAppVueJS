@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <div class="card card-body text-center p-5 mt-5 border-primary">
-    <div class="mb-5 mt-2"><h1>Rating App</h1></div>
+    <div class="mb-5 mt-2"><h1 id="title">Rating App</h1></div>
     <div id="stars">
       <i class="fa fa-star text-warning fa-6x" @click="setRating(1)"></i>
       <i class="fa fa-star text-warning fa-6x" @click="setRating(2)"></i>
@@ -44,8 +44,32 @@ export default {
 
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
 body {
-  background-color: #333
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#title{
+  font-size: 5rem;
+  font-weight: 800;
+  /* text-shadow: 2px 3px rgb(168, 165, 165); */
+}
+
+#title:hover{
+  text-shadow: 2px 3px rgb(255, 255, 255);
+}
+
+.card{
+  background: linear-gradient(217deg, rgba(255,0,0,.1), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(69, 75, 69, 0.1), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.1), rgba(0,0,255,0) 70.71%);
+          
+  border: none;
+  box-shadow: 5px 10px rgba(83, 75, 75, 0.452);
+  
 }
 
 div i {
@@ -57,15 +81,17 @@ div i {
   margin: 0.5rem;
 }
 
-#stars:hover{
-  padding: 1rem;
-}
-
-div i:hover {
-  background: rgba(182, 29, 54, 0.925);
-  cursor: pointer;
+#stars{
   border-radius: 20%;
   padding: .5rem;
+}
+
+div>i:hover {
+  background: rgba(182, 29, 54, 0.925);
+  /* cursor: pointer; */
+  border-radius: 20%;
+  /* padding: 1rem; */
+  transform: scale(1.10);
   box-shadow: 5px 10px rgb(136, 39, 39);
 }
 
